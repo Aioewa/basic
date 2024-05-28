@@ -1,0 +1,10 @@
+{
+    "AV": 1,
+    "name": "Library",
+    "description": [
+        ["text", "The main library for Aioewa. Please add none main libraries to other addons. This should ONLY contain libraries that is 95% needed."]
+    ],
+    "versionAdded": "1.0.0",
+    "type": "system",
+    "hide": true
+}

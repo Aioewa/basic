@@ -1,0 +1,80 @@
+{
+  "name": "Aioewa",
+  "short_name": "Aioewa",
+  "manifest_version": 3,
+  "version": "1.0.0",
+  "version_name": "1-basic",
+  "default_locale": "en",
+  "description": "Aioewa with only the basic system and code. This uses addons and system addons (that is in /addon/*) to work. This makes it very dynamic, and can be the baseline for any extension.",
+  "author": "STIO",
+  "background": {
+    "service_worker": "/addon/basic/background.js",
+    "type": "module"
+  },
+  "minimum_chrome_version": "92",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting"
+  ],
+  "action": {
+    "default_icon": "/addon/basic/icon48.png",
+    "default_popup": "/addon/basic/popup.html",
+    "default_title": "Aioewa"
+  },
+  "icons": {
+    "16": "/addon/basic/icon16.png",
+    "48": "/addon/basic/icon48.png",
+    "128": "/addon/basic/icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "run_at": "document_start",
+      "js": [
+        "/addon/basic/inject.js"
+      ],
+      "all_frames": true
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "/addon/*"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "info@stio.studio",
+      "strict_min_version": "42.0"
+    }
+  },
+  "externally_connectable": {
+    "matches": [
+      "<all_urls>"
+    ]
+  },
+  "options_ui": {
+    "page": "/addon/basic/settings.html",
+    "open_in_tab": true
+  },
+  "homepage_url": "https://aioewa.stio.studio",
+  "sidebar_action": {
+    "default_icon": "/addon/basic/icon128.png",
+    "default_panel": "/addon/basic/settings.html",
+    "default_panel_width": 604,
+    "default_title": "",
+    "maximum_panel_width": 1000,
+    "minimum_panel_width": 400,
+    "panel_width": 604
+  }
+}

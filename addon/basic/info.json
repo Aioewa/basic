@@ -1,0 +1,10 @@
+{
+    "AV": 1,
+    "name": "Basic",
+    "description": [
+        ["text", "The most basic stuff that is necessary for Aioewa to work. Treat it as the system 64 file in windows."]
+    ],
+    "versionAdded": "1.0.0",
+    "type": "system",
+    "hide": true
+}
