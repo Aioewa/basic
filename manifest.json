@@ -19,7 +19,7 @@
   ],
   "action": {
     "default_icon": "/addon/basic/icon48.png",
-    "default_popup": "/addon/basic/popup.html",
+    "default_popup": "/addon/addons tab/addons.html",
     "default_title": "Aioewa"
   },
   "icons": {
@@ -64,7 +64,7 @@
     ]
   },
   "options_ui": {
-    "page": "/addon/basic/settings.html",
+    "page": "/addon/tabs/settings.html",
     "open_in_tab": true
   },
   "homepage_url": "https://aioewa.stio.studio",

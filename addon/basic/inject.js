@@ -2,9 +2,7 @@
 // script.js and styles.js will be called here
 // This is so that the json files don't have to be fetched 2 times. So it is for optimization.
 
-Promise.all([
-    import(chrome.runtime.getURL("/api/module.js"))
-]).then(([aw]) => {
+import(chrome.runtime.getURL("/addon/lib/module.js")).then((aw) => {
     globalThis.aw = aw
     globalThis.addonRootUrl = chrome.runtime.getURL("/addon/")
     // const IF_ = {}

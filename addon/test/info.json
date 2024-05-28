@@ -1,0 +1,12 @@
+{
+    "AV": 1,
+    "name": "Test",
+    "description": [
+        ["text", "Test"]
+    ],
+    "versionAdded": "1.0.0",
+    "type": "toy",
+    "code": {
+        "onTab": "addon.js"
+    }
+}
